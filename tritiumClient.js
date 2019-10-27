@@ -10,21 +10,19 @@ const System = require('./api/system');
 const Tokens = require('./api/tokens');
 const Users = require('./api/users');
 
-let connection = '';
 
 class TritiumClient {
-  constructor(connectionOptions) {
-    connection = `http://${connectionOptions.host}:${connectionOptions.port}`;
-    this.assets = new Assets(connection, axios);
-    this.finance = new Finance(connection, axios);
-    this.ledger = new Ledger(connection, axios);
-    this.names = new Names(connection, axios);
-    this.objects = new Objects(connection, axios);
-    this.overview = new Overview(connection, axios);
-    this.supply = new Supply(connection, axios);
-    this.system = new System(connection, axios);
-    this.tokens = new Tokens(connection, axios);
-    this.users = new Users(connection, axios);
+  constructor(connectionDetails) {
+    this.assets = new Assets(connectionDetails, axios);
+    this.finance = new Finance(connectionDetails, axios);
+    this.ledger = new Ledger(connectionDetails, axios);
+    this.names = new Names(connectionDetails, axios);
+    this.objects = new Objects(connectionDetails, axios);
+    this.overview = new Overview(connectionDetails, axios);
+    this.supply = new Supply(connectionDetails, axios);
+    this.system = new System(connectionDetails, axios);
+    this.tokens = new Tokens(connectionDetails, axios);
+    this.users = new Users(connectionDetails, axios);
   }
 }
 

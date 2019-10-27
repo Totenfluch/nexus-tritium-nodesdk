@@ -1,15 +1,43 @@
+const connectionService = require('../connectionService');
+
 class Users {
-  constructor(connection, axios) {
-    this.connection = connection;
+  constructor(connectionDetails, axios) {
+    this.connectionDetails = connectionDetails;
     this.axios = axios;
   }
 
   createUser(params) {
-    console.log('createUser', this.connection);
+    if (!params.username || !params.password || !params.pin) {
+      throw Error('createUser must contain username, password, pin');
+    }
+    if (params.username.length < 3) {
+      throw Error('createUser username must be a minimum of 3 characters');
+    }
+    if (params.password.length < 8) {
+      throw Error('createUser password must be a minimum of 8 characters');
+    }
+    if (params.pin.length < 4) {
+      throw Error('createUser pin must be a minimum of 4 characters');
+    }
+
+    return connectionService(this.connectionDetails, this.axios, 'users/create/user', params);
   }
 
   loginUser(params) {
-    console.log('loginUser');
+    if (!params.username || !params.password || !params.pin) {
+      throw Error('createUser must contain username, password, pin');
+    }
+    if (params.username.length < 3) {
+      throw Error('createUser username must be a minimum of 3 characters');
+    }
+    if (params.password.length < 8) {
+      throw Error('createUser password must be a minimum of 8 characters');
+    }
+    if (params.pin.length < 4) {
+      throw Error('createUser pin must be a minimum of 4 characters');
+    }
+
+    return connectionService(this.connectionDetails, this.axios, 'users/login/user', params);
   }
 
   logoutUser(params) {

@@ -1,6 +1,6 @@
 class Names {
-  constructor(connection, axios) {
-    this.connection = connection;
+  constructor(connectionDetails, axios) {
+    this.connectionDetails = connectionDetails;
     this.axios = axios;
   }
 }
