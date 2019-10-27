@@ -1,0 +1,13 @@
+{
+    "extends": "airbnb",
+    "parserOptions": {
+        "ecmaVersion": 2019
+    },
+    "rules": {
+        "prefer-destructuring": "off",
+        "max-len": "warn",
+        "no-await-in-loop": "warn",
+        "no-continue": "warn",
+        "arrow-parens": "off"
+    }
+}

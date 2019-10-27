@@ -1,0 +1,27 @@
+{
+  "name": "nexus-tritium-nodesdk",
+  "version": "1.0.0",
+  "description": "Wrapper for the Nexus-Tritium API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Totenfluch/nexus-tritium-nodesdk.git"
+  },
+  "author": "Christian Ziegler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Totenfluch/nexus-tritium-nodesdk/issues"
+  },
+  "homepage": "https://github.com/Totenfluch/nexus-tritium-nodesdk#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.2.2",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3"
+  }
+}
