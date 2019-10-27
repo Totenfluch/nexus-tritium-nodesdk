@@ -2,7 +2,7 @@
   "name": "nexus-tritium-nodesdk",
   "version": "1.0.0",
   "description": "Wrapper for the Nexus-Tritium API",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +16,9 @@
     "url": "https://github.com/Totenfluch/nexus-tritium-nodesdk/issues"
   },
   "homepage": "https://github.com/Totenfluch/nexus-tritium-nodesdk#readme",
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.19.0"
+  },
   "devDependencies": {
     "eslint": "^6.2.2",
     "eslint-config-airbnb": "^18.0.1",
