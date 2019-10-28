@@ -4,7 +4,6 @@ const Finance = require('./api/finance');
 const Ledger = require('./api/ledger');
 const Names = require('./api/names');
 const Objects = require('./api/objects');
-const Overview = require('./api/overview');
 const Supply = require('./api/supply');
 const System = require('./api/system');
 const Tokens = require('./api/tokens');
@@ -18,7 +17,6 @@ class TritiumClient {
     this.ledger = new Ledger(connectionDetails, axios);
     this.names = new Names(connectionDetails, axios);
     this.objects = new Objects(connectionDetails, axios);
-    this.overview = new Overview(connectionDetails, axios);
     this.supply = new Supply(connectionDetails, axios);
     this.system = new System(connectionDetails, axios);
     this.tokens = new Tokens(connectionDetails, axios);
