@@ -55,13 +55,13 @@ class Assets {
 
   async claimAsset(params) {
     if (!params.pin) {
-      throw Error('transferAsset missing parameter pin');
+      throw Error('claimAsset missing parameter pin');
     }
     if (params.pin.length < 4) {
-      throw Error('transferAsset pin must be a minimum of 4 characters');
+      throw Error('claimAsset pin must be a minimum of 4 characters');
     }
     if (!params.txid) {
-      throw Error('transferAsset missing parameter txid');
+      throw Error('claimAsset missing parameter txid');
     }
 
     return connectionService(this.connectionDetails, this.axios, 'assets/claim/asset', params);
@@ -69,7 +69,7 @@ class Assets {
 
   async listAssetHistory(params) {
     if (!params.name && !params.address) {
-      throw Error('transferAsset either name or address must be specified');
+      throw Error('listAssetHistory either name or address must be specified');
     }
 
     return connectionService(this.connectionDetails, this.axios, 'assets/list/asset/history', params);
@@ -77,16 +77,16 @@ class Assets {
 
   async tokenizeAsset(params) {
     if (!params.pin) {
-      throw Error('transferAsset missing parameter pin');
+      throw Error('tokenizeAsset missing parameter pin');
     }
     if (params.pin.length < 4) {
-      throw Error('transferAsset pin must be a minimum of 4 characters');
+      throw Error('tokenizeAsset pin must be a minimum of 4 characters');
     }
     if (!params.name && !params.address) {
-      throw Error('transferAsset either name or address must be specified');
+      throw Error('tokenizeAsset either name or address must be specified');
     }
     if (!params.token_name && !params.token) {
-      throw Error('transferAsset either token_name or token must be specified');
+      throw Error('tokenizeAsset either token_name or token must be specified');
     }
 
     return connectionService(this.connectionDetails, this.axios, 'assets/list/asset/history', params);
