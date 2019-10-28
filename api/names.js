@@ -143,7 +143,6 @@ class Names {
     return connectionService(this.connectionDetails, this.axios, 'names/transfer/name', params);
   }
 
-
   async listNameHistory(params) {
     if (!params.name && !params.address) {
       throw Error('listNameHistory either name or address has to be specified');
