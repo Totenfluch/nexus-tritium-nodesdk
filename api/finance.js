@@ -7,6 +7,9 @@ class Finance {
   }
 
   async createAccount(params) {
+    if (!params.pin) {
+      throw Error('createAccount missing parameter pin');
+    }
     if (params.pin.length < 4) {
       throw Error('createUser pin must be a minimum of 4 characters');
     }
