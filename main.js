@@ -9,6 +9,6 @@ function createClient(connectionOptions) {
 }
 
 
-module.exports = {
+exports = {
   createClient,
 };
