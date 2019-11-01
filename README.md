@@ -8,6 +8,10 @@ Official Documentation can be found here: https://github.com/Nexusoft/LLL-TAO/bl
 const tritium = require('nexus-tritium-nodesdk');
 const tritiumClient = tritium.createClient({
   host: '127.0.0.1',
-  port: '8080',
+  port: '8080', // 8080 is tritium testnet
+  apiUsername: 'apiusername',
+  apiPassword: 'apipassword',
 });
 ```
+
+For the full documentation visit: https://github.com/Nexusoft/LLL-TAO/tree/merging/docs/API
