@@ -12,6 +12,7 @@
   },
   "author": "Christian Ziegler",
   "license": "MIT",
+  "keywords": ["nexus","nexusoft", "tritium", "nexus-tritium", "nexus-api", "nexus-coin", "cryptocurrency", "rpc", "api-call"],
   "bugs": {
     "url": "https://github.com/Totenfluch/nexus-tritium-nodesdk/issues"
   },
