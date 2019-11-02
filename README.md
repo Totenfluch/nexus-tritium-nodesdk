@@ -60,13 +60,13 @@ For example:
 ### Example Commands
 ```
 async function test() {
-    //console.log(await tritiumClient.users.createUser({ username: 'coinkit-test', password: 'coinkit-test1', pin: 'coinkit-test1' }));
-    console.log(await tritiumClient.users.loginUser({ username: 'coinkit-test', password: 'coinkit-test1', pin: 'coinkit-test1' }));
+    //console.log(await tritiumClient.users.createUser({ username: 'username', password: 'password', pin: 'pin' }));
+    console.log(await tritiumClient.users.loginUser({ username: 'username', password: 'password', pin: 'pin' }));
     console.log(await tritiumClient.system.getInfo());
     console.log(await tritiumClient.finance.getBalances());
     console.log(await tritiumClient.finance.listAccounts());
     for (let i = 0; i < 10; i += 1) {
-      console.log(await tritiumClient.finance.createAccount({ name: `test-account-${i}`, pin: 'coinkit-test1' }));
+      console.log(await tritiumClient.finance.createAccount({ name: `test-account-${i}`, pin: 'pin' }));
     }
     console.log(await tritiumClient.finance.listAccounts());
 }
