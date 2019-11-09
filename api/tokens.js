@@ -7,6 +7,9 @@ class Tokens {
   }
 
   async createItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createItem missing parameter pin');
     }
@@ -25,6 +28,9 @@ class Tokens {
 
 
   async debitToken(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('debitToken missing parameter pin');
     }
@@ -45,6 +51,9 @@ class Tokens {
   }
 
   async creditToken(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('creditToken missing parameter pin');
     }
@@ -62,6 +71,9 @@ class Tokens {
   }
 
   async getToken(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('getToken either name or address must be specified');
     }
@@ -70,6 +82,9 @@ class Tokens {
   }
 
   async listTokenTransactions(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listTokenTransactions either name or address must be specified');
     }
@@ -79,6 +94,9 @@ class Tokens {
 
 
   async createAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createAccount missing parameter pin');
     }
@@ -93,6 +111,9 @@ class Tokens {
   }
 
   async debitAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('debitAccount missing parameter pin');
     }
@@ -113,6 +134,9 @@ class Tokens {
   }
 
   async creditAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('creditAccount missing parameter pin');
     }
@@ -130,6 +154,9 @@ class Tokens {
   }
 
   async getAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('getAccount either name or address must be specified');
     }
@@ -138,6 +165,9 @@ class Tokens {
   }
 
   async listAccountTransactions(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listAccountTransactions either name or address must be specified');
     }

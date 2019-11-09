@@ -7,6 +7,9 @@ class Users {
   }
 
   async createUser(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.username || !params.password || !params.pin) {
       throw Error('createUser must contain username, password, pin');
     }
@@ -24,6 +27,9 @@ class Users {
   }
 
   async loginUser(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.username || !params.password || !params.pin) {
       throw Error('createUser must contain username, password, pin');
     }
@@ -41,6 +47,9 @@ class Users {
   }
 
   async logoutUser(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.session) {
       throw Error('logoutUser missing parameter session');
     }
@@ -49,6 +58,9 @@ class Users {
   }
 
   async unlockUser(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('unlockUser missing parameter pin');
     }
@@ -69,6 +81,9 @@ class Users {
   }
 
   async lockUser(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.mining) {
       throw Error('lockUser missing parameter mining');
     }
@@ -91,6 +106,9 @@ class Users {
   }
 
   listAssets(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listAssets missing parameter genesis');
     }
@@ -102,6 +120,9 @@ class Users {
   }
 
   async listAccounts(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listAccounts missing parameter genesis');
     }
@@ -113,6 +134,9 @@ class Users {
   }
 
   async listItems(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listItems missing parameter genesis');
     }
@@ -124,6 +148,9 @@ class Users {
   }
 
   async listNames(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.session) {
       throw Error('listNames missing parameter genesis');
     }
@@ -132,6 +159,9 @@ class Users {
   }
 
   async listNamespaces(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.session) {
       throw Error('listNamespaces missing parameter genesis');
     }
@@ -143,6 +173,9 @@ class Users {
   }
 
   async listNotifications(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listNotifications missing parameter genesis');
     }
@@ -154,6 +187,9 @@ class Users {
   }
 
   async listTokens(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listTokens missing parameter genesis');
     }
@@ -165,6 +201,9 @@ class Users {
   }
 
   async listTransactions(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.genesis) {
       throw Error('listTransactions missing parameter genesis');
     }

@@ -7,6 +7,9 @@ class Supply {
   }
 
   async createItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createItem missing parameter pin');
     }
@@ -21,6 +24,9 @@ class Supply {
   }
 
   async getItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('getItem either name or address has to be specified');
     }
@@ -29,6 +35,9 @@ class Supply {
   }
 
   async updateItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('updateItem missing parameter pin');
     }
@@ -46,6 +55,9 @@ class Supply {
   }
 
   async transferItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('transferItem missing parameter pin');
     }
@@ -63,6 +75,9 @@ class Supply {
   }
 
   async claimItem(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('claimItem missing parameter pin');
     }
@@ -77,6 +92,9 @@ class Supply {
   }
 
   async listItemHistory(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listItemHistory either name or address has to be specified');
     }

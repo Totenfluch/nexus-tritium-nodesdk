@@ -7,6 +7,9 @@ class Finance {
   }
 
   async createAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createAccount missing parameter pin');
     }
@@ -18,6 +21,9 @@ class Finance {
   }
 
   async debitAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('debitAccount missing parameter pin');
     }
@@ -35,6 +41,9 @@ class Finance {
   }
 
   async creditAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('creditAccount missing parameter pin');
     }
@@ -52,6 +61,9 @@ class Finance {
   }
 
   async getAccount(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('getAccount either name or address must be specified');
     }
@@ -64,6 +76,9 @@ class Finance {
   }
 
   async listAccountTransactions(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listAccountTransactions either name or address must be specified');
     }
@@ -76,6 +91,9 @@ class Finance {
   }
 
   async setStake(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('setStake missing parameter pin');
     }
@@ -90,6 +108,9 @@ class Finance {
   }
 
   async migrateStake(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('migrateStake missing parameter pin');
     }
@@ -101,6 +122,9 @@ class Finance {
   }
 
   async migrateAccounts(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('migrateStake missing parameter pin');
     }

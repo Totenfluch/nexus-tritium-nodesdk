@@ -7,6 +7,9 @@ class Names {
   }
 
   async createNamespace(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createNamespace missing parameter pin');
     }
@@ -21,6 +24,9 @@ class Names {
   }
 
   async getNamespace(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name) {
       throw Error('getNamespace missing parameter name');
     }
@@ -29,6 +35,9 @@ class Names {
   }
 
   async transferNamespace(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('transferNamespace missing parameter pin');
     }
@@ -46,6 +55,9 @@ class Names {
   }
 
   async claimNamespace(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('claimNamespace missing parameter pin');
     }
@@ -60,6 +72,9 @@ class Names {
   }
 
   async listNamespaceHistory(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listNamespaceHistory either name or address has to be specified');
     }
@@ -68,6 +83,9 @@ class Names {
   }
 
   async createName(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createName missing parameter pin');
     }
@@ -88,6 +106,9 @@ class Names {
   }
 
   async getName(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.register_address) {
       throw Error('getName either name or register_address has to be specified');
     }
@@ -96,6 +117,9 @@ class Names {
   }
 
   async updateName(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('updateName missing parameter pin');
     }
@@ -113,6 +137,9 @@ class Names {
   }
 
   async transferName(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('transferName missing parameter pin');
     }
@@ -130,6 +157,9 @@ class Names {
   }
 
   async claimName(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('claimName missing parameter pin');
     }
@@ -144,6 +174,9 @@ class Names {
   }
 
   async listNameHistory(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listNameHistory either name or address has to be specified');
     }

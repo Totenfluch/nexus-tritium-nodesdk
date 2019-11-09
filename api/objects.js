@@ -7,6 +7,9 @@ class Objects {
   }
 
   async createSchema(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('createSchema missing parameter pin');
     }
@@ -18,6 +21,9 @@ class Objects {
   }
 
   async getSchema(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('getSchema either name or address has to be specified');
     }

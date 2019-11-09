@@ -7,6 +7,9 @@ class Assets {
   }
 
   async createAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (params.pin.length < 4) {
       throw Error('createAsset pin must be a minimum of 4 characters');
     }
@@ -15,6 +18,9 @@ class Assets {
   }
 
   async getAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (params.pin.length < 4) {
       throw Error('getAsset pin must be a minimum of 4 characters');
     }
@@ -23,6 +29,9 @@ class Assets {
   }
 
   async updateAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('updateAsset missing parameter pin');
     }
@@ -37,6 +46,9 @@ class Assets {
   }
 
   async transferAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('transferAsset missing parameter pin');
     }
@@ -54,6 +66,9 @@ class Assets {
   }
 
   async claimAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('claimAsset missing parameter pin');
     }
@@ -68,6 +83,9 @@ class Assets {
   }
 
   async listAssetHistory(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.name && !params.address) {
       throw Error('listAssetHistory either name or address must be specified');
     }
@@ -76,6 +94,9 @@ class Assets {
   }
 
   async tokenizeAsset(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.pin) {
       throw Error('tokenizeAsset missing parameter pin');
     }

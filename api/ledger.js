@@ -7,6 +7,9 @@ class Ledger {
   }
 
   async getBlockhash(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.height) {
       throw Error('getBlockhash missing parameter height');
     }
@@ -15,6 +18,9 @@ class Ledger {
   }
 
   async getBlock(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.hash) {
       throw Error('getBlock missing parameter hash');
     }
@@ -26,6 +32,9 @@ class Ledger {
   }
 
   async listBlocks(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.hash) {
       throw Error('listBlocks missing parameter hash');
     }
@@ -37,9 +46,11 @@ class Ledger {
   }
 
   async getTransaction(params) {
-    if (params.format) {
-      if (params.hash && params.format === 'raw') {
-        throw Error('getTransaction parameter hash is ignored because of parameter format set to raw');
+    if (params) {
+      if (params.format) {
+        if (params.hash && params.format === 'raw') {
+          throw Error('getTransaction parameter hash is ignored because of parameter format set to raw');
+        }
       }
     }
 
@@ -47,6 +58,9 @@ class Ledger {
   }
 
   async submitTransaction(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.data) {
       throw Error('submitTransaction missing parameter data');
     }
@@ -55,6 +69,9 @@ class Ledger {
   }
 
   async voidTransaction(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
     if (!params.txid) {
       throw Error('voidTransaction missing parameter txid');
     }
