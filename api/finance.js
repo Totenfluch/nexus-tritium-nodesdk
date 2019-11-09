@@ -100,6 +100,17 @@ class Finance {
     return connectionService(this.connectionDetails, this.axios, 'finance/migrate/stake', params);
   }
 
+  async migrateAccounts(params) {
+    if (!params.pin) {
+      throw Error('migrateStake missing parameter pin');
+    }
+    if (params.pin.length < 4) {
+      throw Error('migrateStake pin must be a minimum of 4 characters');
+    }
+
+    return connectionService(this.connectionDetails, this.axios, 'finance/migrate/accounts', params);
+  }
+
   async getBalances(params) {
     return connectionService(this.connectionDetails, this.axios, 'finance/get/balances', params);
   }
