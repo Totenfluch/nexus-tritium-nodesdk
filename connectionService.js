@@ -15,7 +15,7 @@ module.exports = async (connectionDetails, axios, method, params) => {
     if (!e.response) {
       throw Error(e);
     }
-    throw Error(e);
+    throw Error(e.response.data.error);
   }
   return postRequest.data.result;
 };

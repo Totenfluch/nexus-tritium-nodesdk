@@ -64,16 +64,16 @@ class Users {
     if (!params.pin) {
       throw Error('unlockUser missing parameter pin');
     }
-    if (!params.mining) {
+    if (!params.mining && params.mining !== false) {
       throw Error('unlockUser missing parameter mining');
     }
-    if (!params.notifications) {
+    if (!params.notifications && params.notifications !== false) {
       throw Error('unlockUser missing parameter notifications');
     }
-    if (!params.staking) {
+    if (!params.staking && params.staking !== false) {
       throw Error('unlockUser missing parameter staking');
     }
-    if (!params.transactions) {
+    if (!params.transactions && params.transactions !== false) {
       throw Error('unlockUser missing parameter transactions');
     }
 
@@ -84,16 +84,16 @@ class Users {
     if (!params) {
       throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
     }
-    if (!params.mining) {
+    if (!params.mining && params.mining !== false) {
       throw Error('lockUser missing parameter mining');
     }
-    if (!params.notifications) {
+    if (!params.notifications && params.notifications !== false) {
       throw Error('lockUser missing parameter notifications');
     }
-    if (!params.staking) {
+    if (!params.staking && params.staking !== false) {
       throw Error('lockUser missing parameter staking');
     }
-    if (!params.transactions) {
+    if (!params.transactions && params.transactions !== false) {
       throw Error('lockUser missing parameter transactions');
     }
 
