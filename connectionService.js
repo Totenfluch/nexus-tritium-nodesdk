@@ -12,10 +12,12 @@ module.exports = async (connectionDetails, axios, method, params) => {
       data: params,
     });
   } catch (e) {
-    if (!e.response) {
-      throw Error(e);
+    if (e.response.data) {
+      throw Error(JSON.stringify(e.response.data));
     }
-    throw Error(e.response.data.error);
+    if (e.response.statusText) {
+      throw Error(e.response.statusText);
+    }
   }
-  return postRequest.data.result;
+  return postRequest.data;
 };
