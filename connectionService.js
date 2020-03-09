@@ -19,5 +19,5 @@ module.exports = async (connectionDetails, axios, method, params) => {
       throw Error(e.response.statusText);
     }
   }
-  return postRequest.data;
+  return postRequest.data.result;
 };
