@@ -33,8 +33,8 @@ class Finance {
     if (!params.name && !params.address) {
       throw Error('debitAccount either name or address must be specified');
     }
-    if (!params.name_to && !params.address_to) {
-      throw Error('debitAccount either name_to or address_to must be specified');
+    if (!params.name_to && !params.address_to && !params.recipients) {
+      throw Error('debitAccount either name_to or address_to or recipients must be specified');
     }
 
     return connectionService(this.connectionDetails, this.axios, 'finance/debit/account', params);
