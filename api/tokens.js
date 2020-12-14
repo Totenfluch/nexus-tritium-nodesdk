@@ -81,6 +81,17 @@ class Tokens {
     return connectionService(this.connectionDetails, this.axios, 'tokens/get/token', params);
   }
 
+  async listTokenAccounts(params) {
+    if (!params) {
+      throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
+    }
+    if (!params.name) {
+      throw Error('listTokenAccounts name must be specified');
+    }
+
+    return connectionService(this.connectionDetails, this.axios, 'tokens/list/token/accounts', params);
+  }
+
   async listTokenTransactions(params) {
     if (!params) {
       throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
