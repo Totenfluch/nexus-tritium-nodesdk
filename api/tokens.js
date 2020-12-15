@@ -40,10 +40,10 @@ class Tokens {
     if (!params.name && !params.address) {
       throw Error('debitToken either name or address must be specified');
     }
-    if (!params.name_to && !params.address_to) {
-      throw Error('debitToken either name_to or address_to must be specified');
+    if (!params.name_to && !params.address_to && !params.recipients) {
+      throw Error('debitToken either name_to or address_to or recipients must be specified');
     }
-    if (!params.amount) {
+    if (!params.amount && !params.recipients) {
       throw Error('debitToken missing parameter amount');
     }
 
