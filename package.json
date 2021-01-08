@@ -1,6 +1,6 @@
 {
   "name": "nexus-tritium-nodesdk",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Wrapper for the Nexus-Tritium API",
   "main": "main.js",
   "scripts": {
