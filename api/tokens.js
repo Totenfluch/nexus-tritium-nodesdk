@@ -85,8 +85,8 @@ class Tokens {
     if (!params) {
       throw Error('You did not specify any parameters but this call needs some. Check the API Page and retry');
     }
-    if (!params.name) {
-      throw Error('listTokenAccounts name must be specified');
+    if (!params.name && !params.address) {
+      throw Error('listTokenAccounts either name or address must be specified');
     }
 
     return connectionService(this.connectionDetails, this.axios, 'tokens/list/token/accounts', params);
